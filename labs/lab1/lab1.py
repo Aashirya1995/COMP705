@@ -21,7 +21,6 @@ def give_me_a_string():
     return a
     
 
-    pass
 
 def give_me_an_integer():
     """
@@ -32,7 +31,7 @@ def give_me_an_integer():
     b = 2
     sum = a+b
     return sum
-    pass
+    
 
 def give_me_a_boolean():
     """
@@ -44,7 +43,7 @@ def give_me_a_boolean():
     else:
         return False
 
-    pass
+  
 
 def give_me_a_float():
     """
@@ -54,7 +53,7 @@ def give_me_a_float():
     b = 3.2
     sum = a+b
     return sum
-    pass
+    
 
 def give_me_a_list():
     """
@@ -62,7 +61,7 @@ def give_me_a_list():
     """
     a = [1,2,3,4,5,6,7]
     return a
-    pass
+    
 
 def give_me_a_dictionary():
     """
@@ -71,7 +70,7 @@ def give_me_a_dictionary():
     """
     fruits = {"apples" : 1, "pears" : 4, "watermelon" : 2}
     return fruits
-    pass
+    
     
 
 def give_me_a_tuple():
@@ -81,7 +80,7 @@ def give_me_a_tuple():
     firsttup = ('Math', 'History', 123,342)
     return firsttup
 
-    pass
+    
 
 def sum_numbers_one_to_ten():
     """
@@ -96,7 +95,7 @@ def sum_numbers_one_to_ten():
     for i in range(11):
         sum = sum + i
     return sum
-    pass
+    
 
 def check_is_even(number):
     """
@@ -111,7 +110,7 @@ def check_is_even(number):
         return True
     else:
         return False
-    pass
+    
 
 def check_is_less_than(number1, number2):
     """
@@ -124,4 +123,4 @@ def check_is_less_than(number1, number2):
     else:
         return False
 
-    pass
+    
