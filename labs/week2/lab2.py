@@ -28,3 +28,18 @@ def check_title(title_list):
 		if title.istitle(): # checks for titles
 			new_list.append(title) # if found, appends to the new list
 	return new_list # returns the new appended list.
+
+def restock_inventory(inventory):
+	"""
+	Increases inventory of each item in dictionary by 10
+	inventory : a dictionary with:
+		key: string that is the name of the inventory item
+		value: integer that equals the number of that item currently on hand
+	Returns: updated dictionary where each inventory item is restocked.
+
+	"""
+	new_dictionary = {} # create a new emply dictionary
+	for key, value in inventory.items(): # look for key value pairs
+		inventory[key] = value + 10 # in the inventory with the key lets say pencil increase the value by 10
+	return (inventory) # returns the updated dictionary
+
