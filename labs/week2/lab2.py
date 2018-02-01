@@ -4,11 +4,12 @@ Author Name - Aashirya Kaushik
 Date - 01/30/2018
 
 """
+
 def squared_nums(num_list):
 	"""
 	Squares the numbers in num_list
 	num_list: list of numbers
-	Returns : List of square of the numbers from 
+	Returns : List of square of the numbers from num_list
 	"""
 	new_list = [] # initialize a new list
 	for num in num_list: # iterate through the list
@@ -42,4 +43,24 @@ def restock_inventory(inventory):
 	for key, value in inventory.items(): # look for key value pairs
 		inventory[key] = value + 10 # in the inventory with the key lets say pencil increase the value by 10
 	return (inventory) # returns the updated dictionary
+
+def filter_0_items(inventory):
+	"""
+	Removes items that have a value of 0 from a dictionary of inventories
+	inventory: dictionary with:
+		key: string that is the name of the inventory item
+		value: integer that equals th number of that item currently on hand
+	Returns: the same inventory_dict with any item that had 0 quantity removed.
+
+	"""
+
+	new_list = [] # create an empty dictionary
+	for key in inventory: # iterate through the list
+		if inventory[key] == 0: # check for key = 0, if it is then 
+			new_list.append(key) # add it to a new list
+
+	for keys in new_list: 
+		del inventory[keys]
+
+	return inventory
 
