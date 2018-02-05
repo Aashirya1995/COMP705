@@ -10,7 +10,7 @@ div {
 #header {
   height: 40px;
   width: 100%;
-  background-color: #ffcccc;
+  background-color: #DCDCDC;
   position: fixed;
   z-index: 1;
 }
@@ -18,7 +18,7 @@ div {
 #footer{
   height: 50px;
   width: 100%;
-  background-color: #ffcccc;
+  background-color: #DCDCDC;
   clear: both;
   position: relative;
 }
@@ -26,7 +26,7 @@ div {
 .left{
   height: 100px;
   width: 45px;
-  background-color: #e0eeee;
+  background-color: #DCDCDC;
   float: left;
   position: fixed;
 }
@@ -34,7 +34,7 @@ div {
 .right{
   height: 1000px;
   width: 45px;
-  background-color: #e0e0eeee;
+  background-color: #DCDCDC;
   float: right;
   position: inherit;
 }
@@ -64,7 +64,7 @@ li{
 }
 
 a {
-  color: black;
+  color: blue;
   text-decoration: none;
 }
 
