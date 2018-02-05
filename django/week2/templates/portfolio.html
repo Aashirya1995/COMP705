@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id = "header"></div>
+<div class = "left"></div>
+<div class = "stuff">
+  <br><br>
+  <h1>{{my_portfolio | title }}</h1>
+  <h2>Projects</h2>
+  <hr />
+  <br>
+  <p class = "head">Rental</p>
+  <ul>
+    <p> Final project for databases class. I built this in MySql.
+        It was basically a possibe database system framework for a car rental company.</p>
+  </ul>
+  <p class = "head">WeGive</p>
+  <ul>
+      <a href = "https://github.com/UNH-at-Manchester/wegive" >
+        <li> Link to Wegive </li>
+      </a>
+    <p> A group project using Django and Python.
+        A donor focused platform connecting charities and donors.</p>
+  </ul>
+  <p class = "head">Butterfly Catcher</p>
+  <ul>
+
+    <p> Final project for Intro to Programming class using Greenfoot, which is an interactive Java development environment.
+        This was a game in which the player was supposed to catch the butterflies and keep a count.</p>
+  </ul>
+  <p class = "head">Cuisine Plus</p>
+  <ul>
+
+    <p> It was a group project in which we developed web application using Django and Python.
+        Cuisine Plus is an online cookbook with multi cuisine recipes along with videos. </p>
+  </ul>
+</div>
+<div class="right"></div>
+<div id="footer"></div>
+{% endblock %}
