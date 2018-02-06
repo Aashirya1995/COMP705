@@ -56,10 +56,10 @@ def filter_0_items(inventory):
 
 	new_list = [] # create an empty dictionary
 	for key in inventory: # iterate through the list
-		if inventory[key] == 0: # check for key = 0, if it is then 
+		if inventory[key] == 0: # check for key = 0, if it is then
 			new_list.append(key) # add it to a new list
 
-	for keys in new_list: 
+	for keys in new_list:#iterting through new_list
 		del inventory[keys]
 
 	return inventory
@@ -73,8 +73,8 @@ def average_grades(grades):
 	Returns: dictionary that averages out the grades of each student
 
 	"""
-	
+
 	for key, value in grades.items(): # iterate through the dictionary for key and value
 		grades[key] = sum(value)/len(value) # average of the value
-		
+
 	return (grades) #return grades
