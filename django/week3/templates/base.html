@@ -10,7 +10,7 @@
       <a href = "{% url 'home' %}"><button>Home</button></a> |
       <a href = "{% url 'resume:experience' %}"><button>Experience</button></a> |
       <a href = "{% url 'resume:education' %}"><button>Education</button></a>
-      <a href = "contact.html"><button>Contact</button></a>
+      <a href = "{% url 'contact' %}"><button>Contact</button></a>
     </nav>
 
     {% block content %}
