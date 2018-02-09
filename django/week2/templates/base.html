@@ -7,10 +7,10 @@
   </head>
   <body>
     <nav>
-      <a href = "home.html"><button>Home</button></a> |
-      <a href = "resume.html"><button>Resume</button></a> |
-      <a href = "portfolio.html"><button>Portfolio</button></a> |
-      <a href = "contact.html"><button>Contact</button></a>
+      <a href = "{% url 'home' %}"><button>Home</button></a> |
+      <a href = "{% url 'resume' %}"><button>Resume</button></a> |
+      <a href = "{% url 'portfolio' %}"><button>Portfolio</button></a> |
+      <a href = "{% url 'contact' %}"><button>Contact</button></a>
     </nav>
 
     {% block content %}
