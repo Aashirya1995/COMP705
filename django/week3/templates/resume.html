@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id = "header"></div>
+<div class = "left"></div>
+<div class = "stuff">
+  <br><br>
+  <h1>{{my_resume | title }}</h1>
+  <h2>Aashiry Kaushik</h2>
+  <hr />
+  <br>
+  <p class = "head">Education</p>
+  <ul>
+      <a href = "https://manchester.unh.edu/?utm_medium=cpc&utm_source=google&utm_campaign=160unhbrand&utm_content=unh-manchester">
+        <li>University of New Hampshire</li>
+      </a>
+      <p> Student of Computer Science program at UNHM. Expected graduation May 2019. Current GPA - 3.73</p>
+
+  </ul>
+  <p class="head">Experience</p>
+  <ul>
+    <li>Dean's Assistant</li>
+      <p>Maintained the Dean’s and Associate Dean’s calendar.
+         Helped in printing labels, sending out emails.</p>
+    <li>Student Assistant at STEM lab</li>
+      <p>Collaborated with UNH Professor to train class of high school teachers to use MIT App Invento software.
+         Co-taught Scratch software and LEGO Mindstorms kits to students ranging from 3rd to 5th grade with high school teacher.
+         Effectively articulated complex programming concepts in a simplistic way.
+         Managed Inventory of supplies for lab using detailed records through Microsoft Excel.
+         Mentored and supervised high school student that also supported program by assigning tasks,managing hours, and troubleshooting on the job problems.
+      </p>
+    <li> Team leader, Enactus UNH </li>
+      <p>Enactus is an international organization that mobilizes students around the world to make a difference in their communities while developing the skills to become socially responsible business leaders.
+         Through local projects and community engagement, our Enactus team hope to transform lives and shape a better, more sustainable world.
+      </p>
+    </ul>
+    <p class ="head">Interests</p>
+    <ul>
+      <li>Photography</li>
+      <li>Programming</li>
+      <li>Dance</li>
+      <li>Swimming</li>
+    </ul>
+  </div>
+  <div class="right"></div>
+  <div id="footer"></div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
