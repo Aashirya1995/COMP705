@@ -6,15 +6,16 @@
     <link rel='stylesheet' href="{% static 'css/style.css' %}" />
   </head>
   <body>
+    <div class="container">
     <nav>
       <a href = "{% url 'home' %}"><button>Home</button></a> |
-      <a href = "{% url 'resume:portfolio' %}"><button>Portfolio</button></a> |
+      <a href = "{% url 'resume:resume' %}"><button>Resume</button></a> |
       <a href = "{% url 'contact' %}"><button>Contact</button></a>
-      <a href = "{% url 'resume' %}"><button>Resume</button></a>
+      <a href = "{% url 'portfolio' %}"><button>Portfolio</button></a>
     </nav>
 
     {% block content %}
     {% endblock %}
-
+  </div>
   </body>
 </html>
