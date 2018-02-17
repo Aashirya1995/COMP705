@@ -1,0 +1,28 @@
+p {
+  text-align: center;
+  font-family: Garamond, serif;
+  font-size: 18px;
+}
+
+div {
+  border-radius: 5px;
+  border: 2px solid #6495ED;
+  background-color: #BCD2EE;
+  height: 50px;
+  width: 120px;
+  margin: auto;
+  text-align: center;
+}
+
+#header {
+  position: fixed;
+  width: 97.5%
+  margin-top: -20px;
+  background-color: #668284;
+}
+
+a {
+  text-decoration: none;
+  color: #3D59AB;
+  font-family: Verdana, sans-serif;
+}

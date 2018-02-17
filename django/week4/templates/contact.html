@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id = "header"></div>
+<div class = "left"></div>
+<div class = "stuff">
+  <br><br>
+  <h1>{{my_contact | title }}</h1>
+  <form action="/actin_page.php">
+    First Name:<br>
+    <input type="text" name="firstname"><br>
+    Last Name:<br>
+    <input type="text" name="firstname"><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div class="right"></div>
+<div id="footer"></div>
+{% endblock %}
