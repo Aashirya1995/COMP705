@@ -20,14 +20,14 @@ class ResumeTestCase(TestCase):
         Test case for get_last_name_first_name
         '''
         r = Resume.objects.first()
-        self.assertEqual(r.get_last_name_first_name(), 'Kaushik Aashirya')
+        self.assertEqual(r.get_last_name_first_name(), "Kaushik, Aashirya")
 
     def test_full_name(self):
         '''
         Test case for get_full_name method
         '''
         r = Resume.objects.first()
-        self.assertEqual(r.get_full_name(), 'Aashirya Kaushik')
+        self.assertEqual(r.get_full_name(), "Aashirya, Kaushik")
 
     def test_education(self):
         '''
