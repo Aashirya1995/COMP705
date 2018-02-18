@@ -3,6 +3,9 @@ from .models import Experience, Education,Resume
 
 # Create your views here.
 def resume(request):
+    '''
+    Renders Resume
+    '''
 #def resume(request):
 #    return HttpResponse("Welcome to Resume App")
     my_resume = Resume.objects.first()
