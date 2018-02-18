@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    {% if Resume %}
+    {% if my_resume %}
       <ul>
         <h2 class="head">Experience</h2>
-        {% for experience in resume_obj.get_experience %}
-          <li>Title - {{Experience.title}}</li>
+        {% for Experience in my_resume.get_experience %}
+          <li>{{Experience.title}}</li>
             <p>Location - {{Experience.location}}</p>
             <p>Start date - {{Experience.start_date}}</p>
-            <p>End date - {{Experience.end_date}}</p>
+            <p>End date - {{Experience.nd_date}}</p>
             <p>Description - {{Experience.description}}</p>
         {% endfor %}
       </ul>
+      <br>
       <ul>
         <h2 class="head">Education</h2>
-        {% for education in resume_obj.get_education %}
+        {% for Education in my_resume.get_education %}
           <li>{{Education.instituition_name}}</li>
             <p>Location - {{Education.location}}</p>
             <p>Degree - {{Education.degree}}</p>
@@ -22,6 +23,7 @@
             <p>GPA - {{Education.gpa}}</p>
         {% endfor %}
       </ul>
+
     {% endif %}
 
 
