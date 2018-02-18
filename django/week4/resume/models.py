@@ -7,14 +7,14 @@ class Resume(models.Model):
     def get_full_name(self):
         return "{} {}".format(self.first_name,self.last_name)
 
-    def get_last_name(self):
+    def get_last_name_first_name(self):
         return "{} {}".format(self.last_name,self.first_name)
 
     def get_experience(self):
-        return experience_set.all()
+        return self.experience_set.all()
 
     def get_education(self):
-        return education_set.all()
+        return self.education_set.all()
 
 class Experience(models.Model):
     parent_resume = models.ForeignKey(Resume,on_delete=models.CASCADE,default = 1)
