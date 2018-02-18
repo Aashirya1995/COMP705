@@ -5,7 +5,7 @@ from .models import Experience, Education,Resume
 def resume(request):
 #def resume(request):
 #    return HttpResponse("Welcome to Resume App")
-    qs = Resume.objects.first()
+    my_resume = Resume.objects.all()
     #exp_qs = Resume.get_experience()
-    context = {'Resume' : qs}
+    context = {'my_resume' : my_resume}
     return render(request,'resume/resume.html',context)
