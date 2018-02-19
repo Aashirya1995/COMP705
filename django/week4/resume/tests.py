@@ -10,39 +10,35 @@ class ResumeTestCase(TestCase):
 
         my_resume = Resume(first_name = 'Aashirya', last_name = 'Kaushik')
         my_resume.save()
-        my_education = None
-        #my_education.save()
-        my_experience = None
-        #my_experience.save()
 
     def test_last_name_first_name(self):
         '''
         Test case for get_last_name_first_name
         '''
-        r = Resume.objects.first()
-        self.assertEqual(r.get_last_name_first_name(), "Kaushik, Aashirya")
+        l_name = Resume.objects.first() #gets the first object from the Resume class.
+        self.assertEqual(l_name.get_last_name_first_name(), "Kaushik, Aashirya") # Checks if l_name.get_last_name_first_name is equal to the string.
 
     def test_full_name(self):
         '''
         Test case for get_full_name method
         '''
-        r = Resume.objects.first()
-        self.assertEqual(r.get_full_name(), "Aashirya, Kaushik")
+        f_name = Resume.objects.first()  # gets the first object from the Resume class.
+        self.assertEqual(f_name.get_full_name(), "Aashirya, Kaushik") # checks if f_name.get_full_name is equal to the string.
 
     def test_education(self):
         '''
         Test case for get_education
         '''
-        r = Resume.objects.first()
-        actual = list(r.get_education())
-        expected = list(r.education_set.all())
-        self.assertEqual(actual,expected)
+        edu = Resume.objects.first() # gets the first object from the Resume class.
+        actual_edu = list(edu.get_education())
+        expected_edu = list(edu.education_set.all())
+        self.assertEqual(actual,expected) # checks if actual is equal to expected.
 
     def test_experience(self):
         '''
         Test case for get_experience
         '''
-        r = Resume.objects.first()
-        actual = list(r.get_experience())
-        expected = list(r.experience_set.all())
-        self.assertEqual(actual,expected)
+        exp = Resume.objects.first() # gets the first object from the Resume class
+        actual_exp = list(exp.get_experience())
+        expected_exp = list(exp.experience_set.all())
+        self.assertEqual(actual,expected) # checks if actual is equal to expected.
