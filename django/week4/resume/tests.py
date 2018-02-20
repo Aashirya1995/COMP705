@@ -8,8 +8,16 @@ class ResumeTestCase(TestCase):
     """
     def setUp(self):
 
-        my_resume = Resume(first_name = 'Aashirya', last_name = 'Kaushik')
-        my_resume.save()
+        self.my_resume = Resume.objects.create(first_name = 'Aashirya', last_name = 'Kaushik')
+        #my_resume.save()
+        self.my_education = Education.objects.create(parent_resume = self.my_resume, instituition_name =  "UNH", location = "Manchester",
+                               degree =  "Bachelors", major = "Computer Science", gpa = "3.73" )
+
+        self.my_experience = Experience.objects.create(parent_resume = self.my_resume, title =  "Dean's Assistant", location = "Dean's Office, UNHM",
+                                start_date =  "2016-06-05", end_date = "2016-08-04", description = "Maintained the Dean’s and Associate Dean’s calendar." )
+
+
+
 
     def test_last_name_first_name(self):
         '''
