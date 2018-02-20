@@ -32,7 +32,7 @@ class ResumeTestCase(TestCase):
         edu = Resume.objects.first() # gets the first object from the Resume class.
         actual_edu = list(edu.get_education())
         expected_edu = list(edu.education_set.all())
-        self.assertEqual(actual,expected) # checks if actual is equal to expected.
+        self.assertEqual(actual_edu,expected_edu) # checks if actual is equal to expected.
 
     def test_experience(self):
         '''
@@ -41,4 +41,4 @@ class ResumeTestCase(TestCase):
         exp = Resume.objects.first() # gets the first object from the Resume class
         actual_exp = list(exp.get_experience())
         expected_exp = list(exp.experience_set.all())
-        self.assertEqual(actual,expected) # checks if actual is equal to expected.
+        self.assertEqual(actual_exp,expected_exp) # checks if actual is equal to expected.
