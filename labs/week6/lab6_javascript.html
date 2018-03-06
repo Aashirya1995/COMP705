@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Lab 6</title>
+
+	<style>
+		li {
+			list-style: none;
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		.problem {
+			text-size: 1.5em;
+			font-weight: 700;
+			padding: 10px 20px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="header centered">
+		<h1>Welcome To Lab 6</h1>
+		<p><small>It's good to see you again, you like nice today.</small></p>
+
+		<h3>Instructions</h3>
+		<p>Read, and then do. It's that simple.</p>
+		<p>Add to workspace/labs/week6 and push to git. You get me?</p>
+	</div>
+
+	<div id="prob1">
+		<p class='problem'>1. When I click the button below, it should change from "click me!" to "I was clicked!"</p>
+		<button id = "Button1" onclick = "change_header()">Click Me!</button>
+		<script>
+			function change_header(){
+				document.getElementById("Button1").innerHTML = "I was clicked"
+			}
+		</script>
+	</div>
+
+	<div id="prob2">
+		<p class='problem'>2. There are two buttons below. When a button is clicked, the other
+			 button should appear and the button that was clicked should disappear.</p>
+		<button id = "buttonTwo" onclick = "button_dissappear()">Button A: Show B</button>
+		<button id = "buttonTwo" onclick = "button_dissappear()">Button B: Show A</button>
+		<script>
+			function button_dissappear(show){
+				var button = document.getElementById('buttonTwo');
+				if(show){
+					button.style.display = "block";
+				}
+				else{
+					button.style.display = "none";
+				}
+
+			}
+		</script>
+
+	</div>
+
+	<div id="prob4">
+		<p id = "header" class='problem'>3. My favorite color is is pink. When I click the button below. I want
+			this header to change to my favorite color</p>
+		<h1></h1>
+		<button onclick = "change_color()">Pink Is My Favorite Color</button>
+		<script>
+			function change_color()
+			{
+				var button = document.getElementById('header');
+				button.style.color = "pink";
+			}
+		</script>
+	</div>
+
+	<div id="prob4">
+		<p class='problem'>4. I like to say hi to people. There is an unorded list below and a button. When I click the button,
+			I want another list item to appear greeting a new person.</p>
+		<button onclick = "show_greetings()">Say Hi!</button>
+		<ul id = "my-list"></ul>
+		<script>
+		function show_greetings(){
+			var greeting = "Hi Jon, How are you? This assignment was hard";
+			var ul = document.getElementById("my-list");
+			var hello = document.createElement("hello");
+				hello.appendChild(document.createTextNode(greeting));
+				ul.appendChild(hello);
+			}
+
+		</script>
+	</div>
+
+	<div id="prob5">
+		<p class='problem'>5. I like to browse the web. But I'm a nerd, and only use the console.
+			There is a text box and button below. I want to put a url into the text box, click the button, and see the response in the console.</p>
+		<input id = "url" type="text">
+		<button onclick = "fetch_func()">Fetch!</button>
+		<script>
+		function fetch_func(){
+			var query = document.getElementById('url').value;
+			fetch(query).then(function(response){
+				return response.json();
+			}).then(function(response){
+				console.log(response);
+			}).catch(function(error){
+				console.log('error');
+			})
+
+		}
+
+		</script>
+	</div>
+
+	<div id="prob6">
+		<p class='problem'>6. I like my data like I like my news...fake. Fill the empty ul below with some fake data from https://jsonplaceholder.typicode.com/ when I click the fetch button.</p>
+		<button onclick = "prob6()">Fetch!</button>
+		<ul id = "my-list"></ul>
+		<script>
+		function prob6(){
+			var url = "https://jsonplaceholder.typicode.com/posts/1";
+			fetch(url).then(function(response){
+				return response.json();
+			}).then(function(response){
+				var testing = JSON.stringify(response);
+				console.log(testing);
+				console.log(response);
+				var li = document.createElement("li");
+				var ul = document.getElementById("my-list");
+				li.appendChild(document.createTextNode(testing));
+				ul.appendChild(li);
+			}).catch(function(error){
+				console.log(error);
+			})
+
+		}
+		</script>
+	</div>
+
+<script>
+	alert('Have fun! Submit by placing your finished file in workspace/labs/week6 and push to git. Collaborate via slack.');
+</script>
+</body>
+
+</html>
